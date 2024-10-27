@@ -3,12 +3,19 @@ package herenciaAndy;
  Luego, crea dos clases derivadas, Estudiante y Profesor,
  que hereden de Persona y agreguen atributos específicos para cada una, usando sus propios constructores. */
 public class Persona {
-    String nombre; int edad;
+    protected String nombre;  protected int edad;
     public Persona(String nombre, int edad){
         this.nombre = nombre;
         this.edad = edad;
     }
     public void mostrarInformacion(){
-        System.out.println("Nombre "+ nombre+"edad "+ edad);
+        System.out.println("Nombre "+ nombre+" edad "+ edad);
+    }
+    public static void main(String[] args) {
+        Estudiante estudiante = new Estudiante("Lukas ", 20, " TICS");
+        Profesor profe = new Profesor("Lalito ", 30, " Matemáticas");
+        estudiante.mostrarInformacion();
+        System.out.println();
+        profe.mostrarInformacion();
     }
 }
